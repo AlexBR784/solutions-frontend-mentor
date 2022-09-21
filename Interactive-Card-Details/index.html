@@ -25,7 +25,9 @@
           <p id="card-number-date-image">00/00</p>
         </div>
       </div>
-      <div id="card-back"></div>
+      <div class="card" id="card-back">
+        <p id="card-number-cvc-image">000</p>
+      </div>
       <div id="left-image"></div>
       <div id="form-container">
         <form id="card-form">
@@ -74,6 +76,7 @@
             <div id="cvc-container">
               <p>CVC</p>
               <input
+                name="cvc"
                 class="medium"
                 type="text"
                 pattern="\d*"
@@ -85,6 +88,12 @@
           <p id="date-error" class="error">Can't be blank</p>
           <button>Confirm</button>
         </form>
+      </div>
+      <div id="completed">
+        <img src="resources/images/icon-complete.svg" alt="completed" />
+        <h1>THANK YOU!</h1>
+        <p>We've added your card details</p>
+        <button id="continue">Continue</button>
       </div>
     </main>
     <script src="validateForm.js"></script>

@@ -3,6 +3,8 @@
 - Dark grayish violet: hsl(279, 6%, 55%)
 - Very dark violet: hsl(278, 68%, 11%)*/
 
+
+
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
 
 :root {
@@ -12,9 +14,13 @@
     --error: hsl(0, 100%, 66%);
 }
 
+
+
 *{
     font-family: Space Grotesk;
+    letter-spacing: 1px;
 }
+
 
 
 body{
@@ -25,9 +31,8 @@ body{
 }
 
 main {
+    height: 100vh;
     display: flex;
-    flex-direction: row;
-    height: 100%;
 }
 
 #left-image {
@@ -35,7 +40,9 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     width: 35%;
-    height: auto;
+    height: 100%;
+    
+    
 }
 
 #form-container {
@@ -125,14 +132,15 @@ button {
     cursor: pointer;
 }
 
+
 .card{
     position: absolute;
     
 }
 
 #card-front {
-    top: 15%;
-    left: 20%;
+    top: 20%;
+    left: 20em;
     background-image: url(./resources/images/bg-card-front.png);
     width: 447px;
     height: 245px;
@@ -143,7 +151,7 @@ button {
     font-size: 25px;
     margin-top: 145px;
     margin-left: 35px;
-    letter-spacing: 5px;
+    
 
 }
 #card-number-name-image{
@@ -186,4 +194,153 @@ button {
     margin-top:30px;
     align-items: center;
     position: absolute;
+}
+
+#card-back{
+    background: url(./resources/images/bg-card-back.png);
+    width: 447px;
+    height: 245px;
+    top: 50%;
+    left: 27em;
+}
+
+#card-number-cvc-image{
+    color: white;
+    position: relative;
+    margin-top: 110px;
+    font-size: 18px;
+    float: right;
+    margin-right: 50px;
+}
+
+#completed {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin: auto auto;
+    box-sizing: border-box;
+    width: auto;
+}
+
+#continue {
+    width: 100%;
+}
+@media (max-width: 425px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    #left-image {
+        background-image: url(./resources/images/bg-main-mobile.png);
+        height: 35%;
+        background-size: cover;
+        width: 100%;
+    }
+
+    #card-back{
+        background: url(./resources/images/bg-card-back.png);
+        background-size: cover;
+        width: 290px;
+        height: 160px;
+        top: 9%;
+        left: 20%;
+
+    }
+
+    #card-number-cvc-image{
+        font-size: 15px;
+        margin-top: 24%;
+        margin-right: 10%;
+    }
+
+    #card-front {
+        top: 21%;
+        left: 5%;
+        width: 290px;
+        height: 160px;
+        z-index: 10;
+        background-size: cover;
+
+    }
+   
+
+    #form-container {
+        position: relative;
+        display: grid;
+        place-content: center;
+        width: 100%;
+        padding: 5px;
+        margin-top: 100px;
+        margin-right: 0px;
+        box-sizing: border-box;
+        z-index: 9;
+        
+        
+    }
+
+    .long {
+        width: calc(1246px * 0.3);
+    }
+    
+    .short {
+        width: calc(1246px * 0.06);
+    }
+
+    button{
+        width: 100%;
+        padding:20px;
+        margin-right: 0;
+        
+    }
+
+    #card-number-value-image {
+        color: white;
+        
+        margin-top: 27%;
+        margin-left: 35px;
+        font-size: 18px;
+        
+    
+    }
+    #card-number-name-image{
+        color: white;
+        font-size: 10px;
+    }
+    
+    #card-number-date-image {
+        color: white;
+        font-size: 10px;
+    }
+
+    #circle-1{
+        border: 1px solid white;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        background-color: white;
+    }
+    
+    #circle-2{
+        border: 1px solid white;
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        margin-left: 15px;
+    
+    }
+
+    #completed {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 120px;
+        box-sizing: border-box;
+    }
+
+    #continue {
+        width: 90%;
+    }
+
+   
 }
