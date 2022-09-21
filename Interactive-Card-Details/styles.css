@@ -344,3 +344,27 @@ button {
 
    
 }
+
+@media (max-width: 1700px) {
+    #card-front {
+        top: 20%;
+        left: 10em;
+    }
+
+    #card-back{
+        left: 15em;
+    }
+
+    
+}
+
+@media (max-width: 1024px) {
+    #card-front {
+        top: 20%;
+        left: 5em;
+    }
+
+    #card-back{
+        left: 10em;
+    }
+}
