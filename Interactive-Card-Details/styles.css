@@ -1,0 +1,189 @@
+/*- White: hsl(0, 0%, 100%)
+- Light grayish violet: hsl(270, 3%, 87%)
+- Dark grayish violet: hsl(279, 6%, 55%)
+- Very dark violet: hsl(278, 68%, 11%)*/
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+
+:root {
+    --light-gray-violet: hsl(270, 3%, 87%);
+    --dark-gray-violet: hsl(279, 6%, 55%);
+    --dark-violet: hsl(278, 68%, 11%);
+    --error: hsl(0, 100%, 66%);
+}
+
+*{
+    font-family: Space Grotesk;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+#left-image {
+    background-image: url(./resources/images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 35%;
+    height: auto;
+}
+
+#form-container {
+    display: grid;
+    place-content: center;
+    width: calc(100% - 35%);
+}
+
+.form.input {
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    border: 2px solid hsl(0, 0%, 87%);
+    color: var(--dark-violet);
+    font-weight: 500;
+    font-size: 15px;
+
+}
+
+.long {
+    width: calc(1246px * 0.4);
+}
+
+.short {
+    width: calc(1246px * 0.06);
+}
+
+
+input:focus{
+    border: 2px solid hsl(277, 16%, 67%);
+}
+
+input:invalid{
+    border: 2px solid var(--error);
+}
+
+p{
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--dark-violet);
+}
+
+.error {
+    display: none;
+    color: var(--error);
+}
+
+.error_visible {
+    display: block;
+}
+
+
+#date-cvc-container{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.medium {
+    width: 100%;
+}
+
+#date-container {
+    width: 50%;
+}
+
+#cvc-container {
+
+    margin-left: 20px;
+    width: 50%;
+}
+
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    background-color: var(--dark-violet);
+    cursor: pointer;
+}
+
+.card{
+    position: absolute;
+    
+}
+
+#card-front {
+    top: 15%;
+    left: 20%;
+    background-image: url(./resources/images/bg-card-front.png);
+    width: 447px;
+    height: 245px;
+}
+
+#card-number-value-image {
+    color: white;
+    font-size: 25px;
+    margin-top: 145px;
+    margin-left: 35px;
+    letter-spacing: 5px;
+
+}
+#card-number-name-image{
+    color: white;
+}
+
+#card-number-date-image {
+    color: white;
+}
+
+#image-front-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 35px;
+    margin-right: 35px;
+    align-items: center;
+}
+
+#circle-1{
+    border: 1px solid white;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    background-color: white;
+}
+
+#circle-2{
+    border: 1px solid white;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    margin-left: 15px;
+
+}
+
+#circles {
+    display: flex;
+    margin-left: 35px;
+    margin-top:30px;
+    align-items: center;
+    position: absolute;
+}

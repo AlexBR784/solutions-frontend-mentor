@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Details</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./resources/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="card" id="card-front">
+        <div id="circles">
+          <div id="circle-1"></div>
+          <div id="circle-2"></div>
+        </div>
+        <p id="card-number-value-image">0000 0000 0000 0000</p>
+        <div id="image-front-container">
+          <p id="card-number-name-image">JANE APPLESEED</p>
+          <p id="card-number-date-image">00/00</p>
+        </div>
+      </div>
+      <div id="card-back"></div>
+      <div id="left-image"></div>
+      <div id="form-container">
+        <form id="card-form">
+          <div class="form-input">
+            <p for="name">CARDHOLDER NAME</p>
+            <input
+              class="long"
+              name="name"
+              type="text"
+              placeholder="e.g. Jane Appleseed"
+            />
+          </div>
+          <div class="form-input">
+            <p for="card-number">CARD NUMBER</p>
+            <input
+              class="long"
+              name="card-number"
+              type="tel"
+              maxlength="19"
+              placeholder="e.g. 1234 5678 9123 0000"
+            />
+            <p id="number-error" class="error">Wrong format, numbers only</p>
+          </div>
+          <div id="date-cvc-container">
+            <div id="date-container">
+              <p>EXP. DATE (MM/YY)</p>
+              <input
+                class="short"
+                name="month"
+                type="text"
+                pattern="\d*"
+                maxlength="2"
+                placeholder="MM"
+              />
+
+              <input
+                class="short"
+                type="text"
+                name="year"
+                pattern="\d*"
+                maxlength="2"
+                placeholder="YY"
+              />
+            </div>
+
+            <div id="cvc-container">
+              <p>CVC</p>
+              <input
+                class="medium"
+                type="text"
+                pattern="\d*"
+                maxlength="3"
+                placeholder="e.g. 123"
+              />
+            </div>
+          </div>
+          <p id="date-error" class="error">Can't be blank</p>
+          <button>Confirm</button>
+        </form>
+      </div>
+    </main>
+    <script src="validateForm.js"></script>
+  </body>
+</html>
