@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+*{
+    font-family: Plus Jakarta Sans;
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body {
+    min-height: 100vh;
+}
+
+main {
+    
+    max-height: 100%;
+    margin: 30px 17px;
+}
+
+.top-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar-first{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.top-bar-first div {
+    border: 1px solid;
+    background-color: hsl(217, 88%, 25%);
+    color: white;
+    padding: 4px 13px;
+    border-radius: 10px;
+}
+
+.top-bar-first h1{
+    font-size: 20px;
+    margin-right: 10px;
+    
+}
+
+.top-bar p{
+    color: hsl(224, 23%, 33%);
+    cursor: pointer;
+}
+
+.top-bar p:hover{
+    color: hsl(222, 28%, 48%);
+}
+
+.notification-container {
+
+    margin-top: 25px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.notification{
+    background-color: hsl(206, 64%, 98%);
+    margin-bottom: 13px ;
+    border-radius: 10px;
+    display: flex;
+    padding: 15px;
+}
+
+.notification img {
+    max-width: 40px;
+    max-height: 40px;
+}
+
+.name {
+    color: black;
+    font-weight: 800;
+    margin-right: 3px;
+    cursor: pointer;
+}
+
+.name:hover {
+    color: hsl(219, 85%, 26%)
+}
+
+.comment {
+    margin-left: 13px;
+    
+}
+
+.comment .content{
+    
+    font-size: 14px;
+    color: hsl(223, 6%, 44%);
+}
+
+.post {
+    position: relative;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.post:hover {
+    color: hsl(219, 85%, 26%);
+}
+
+.time {
+    color: hsl(222, 6%, 67%);
+    opacity: 1;
+    margin-top: 2px;
+    font-size: 14px;
+}
+
+.circle {
+    display: inline-block;
+    vertical-align: middle;
+    width: 8px;
+    height: 8px;
+    max-width: 8px;
+    max-height: 8px;
+    margin-left: 2px;
+    background-color: red;
+    border-radius: 100%;
+    
+}
+
+.group {
+    color: hsl(219, 85%, 26%);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.private-message {
+    
+    margin-bottom: 13px ;
+    border-radius: 10px;
+    display: flex;
+    padding: 15px;
+}
+
+.private-message img {
+    max-width: 40px;
+    max-height: 40px;
+}
+.dm {
+    border: 1px solid hsl(220, 6%, 90%);
+    border-radius: 10px;
+    padding: 20px 15px;
+    font-size: 15px;
+    color: hsl(223, 6%, 44%);
+    margin-top: 13px;
+    margin-left: 13px;
+    cursor: pointer;
+}
+
+.dm:hover {
+    background-color: hsl(210, 62%, 94%);
+}
+
+.old{
+    background-color: transparent;
+}
+
+.picture {
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+
+@media screen and (min-width:1440px) {
+    * {
+        margin: 0;
+    }
+
+    body {
+        background-color: hsl(228, 71%, 99%);
+        display: grid;
+        place-content: center;
+    }
+
+    main {
+        width: 730px;
+        height: 840px;
+        border-radius: 10px;
+        padding: 35px;
+        background-color: white;
+        
+    }
+    .comment .content{
+    
+        font-size: 16px;
+        color: hsl(223, 6%, 44%);
+    }
+
+    .dm {
+        font-size: 16px;
+    }
+
+    .picture {
+        margin-left: auto;
+        cursor: pointer;
+    }
+    
+}
