@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Overpass;
+}
+
+
+
+body {
+    min-height: 100vh;
+    background-color: hsl(216, 12%, 8%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container {
+    width: 410px;
+    height: 410px;
+    background: radial-gradient(circle at 50% 0%,hsla(216, 12%, 54%, 0.261) 0%, hsl(215, 27%, 12%) 100%);
+    border-radius: 10%; 
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+.star-container img {
+    background-color: hsla(217, 12%, 63%, 0.074);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+h1{
+    color: white;
+    font-size: 1.9rem;
+    margin-bottom: 10px;
+}
+
+p{
+    color: hsl(217, 12%, 63%);
+    line-height: 26px;
+}
+
+.ratings {
+    display: flex;
+}
+.ratings{
+    align-items: center;
+    justify-content: space-between;
+}
+
+.circle {
+    
+    background-color: hsla(217, 12%, 63%, 0.074);
+    color: white;
+    border-radius: 50%;
+    height: 100%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.circle:hover {
+    background-color: hsl(25, 97%, 53%);
+}
+
+.circle:focus {
+    background-color: hsl(214, 12%, 54%);
+}
+
+button{
+    background-color: hsl(25, 97%, 53%);
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+button:hover{
+    color:hsl(25, 97%, 53%);
+    background-color: white;
+}
