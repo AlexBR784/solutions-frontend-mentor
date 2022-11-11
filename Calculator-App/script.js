@@ -5,21 +5,24 @@ const equalButton = document.querySelectorAll("[data-equal]");
 const resultP = document.getElementById("result-number");
 const removeButton = document.querySelectorAll("[data-remove]");
 const dec = document.querySelectorAll("[data-dec]");
-const changer = document.getElementById("changeTheme");
 const toggle = document.getElementById("custom-toggle");
 
-const init = () => {
-  return localStorage.getItem("activeTheme");
-};
-
-const changeTheme = (themeState, lastTheme) => {
+function changeTheme(themeState, lastTheme = 1) {
   localStorage.setItem("activeTheme", themeState);
-  toggle.value = themeState;
+  console.log(lastTheme, themeState);
+
   document.querySelector("body").classList.remove(`theme${lastTheme}`);
   document.querySelector("body").classList.add(`theme${themeState}`);
+}
+const init = () => {
+  let theme = localStorage.getItem("activeTheme");
+  if (theme) {
+    changeTheme(theme, 1);
+    toggle.value = theme;
+    return theme;
+  } else return 1;
 };
 var themeState = init();
-themeState ? changeTheme(themeState) : 1;
 
 let numberOfOperations = 0;
 let pileOfOperations = [];
@@ -30,14 +33,12 @@ let res = 0;
 
 let lastTheme = themeState;
 
-toggle.addEventListener("change", function (e) {
+toggle.addEventListener("change", ({ target }) => {
   lastTheme = themeState;
-  themeState = e.target.value;
-  themeState = parseInt(themeState);
-  changeTheme(themeState, lastTheme);
-});
+  themeState = target.value;
 
-changer.addEventListener("click", changeTheme);
+  changeTheme(target.value, lastTheme);
+});
 
 numberButtons.forEach((number) => {
   number.addEventListener("click", () => {
