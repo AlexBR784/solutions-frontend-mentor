@@ -33,9 +33,10 @@ const projects = [
 const ul = document.getElementById("dropUl");
 const dropDiv = document.getElementById("drop");
 const search = document.querySelector(".form-control");
-
+const badge = document.getElementById("badge");
 const projectsLen = projects.length;
-dropDiv.innerHTML += `<p class='text-center text-muted mb-0'>Currently there are <span class="badge text-bg-secondary">${projectsLen}</span> solutions completed!</p>`;
+
+badge.innerHTML = projectsLen;
 
 console.log(search);
 const onSubmit = (e) => {
