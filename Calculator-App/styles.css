@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: League Spartan;
+}
+body {
+  background-color: var(--background);
+  padding: 30px 25px;
+  height: 100vh;
+}
+
+main {
+  height: 100%;
+}
+
+.top-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: var(--resultNumber)
+}
+
+.result {
+  display: flex;
+  align-items:center;
+  padding: 25px;
+  justify-content: end;
+  height: 90px;
+  margin-top: 35px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  background-color: var(--result);
+}
+
+.result p {
+  font-size: 32px;
+  color: var(--resultNumber)
+}
+
+.numbers {
+  background-color: var(--gridBackground);
+  height: 420px;
+  padding: 25px;
+  border-radius: 10px;
+  
+}
+
+button {
+  cursor: pointer;
+}
+
+.numbers-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 10px;
+}
+
+.number-button{
+  font-size: 32px;
+  width: 100%;
+  height: 60px;
+  border-radius: 7px;
+  background-color: var(--btnBackground);
+  color: var(--numberColor);
+  border: none;
+  box-shadow: 0 4px var(--btnShadow);
+  margin-bottom: 13px;
+  margin-right: 13px;
+}
+
+.number-button:active {
+  background-color: var(--btnShadow);
+}
+
+.special-button {
+  font-size: 22px;
+  width: 100%;
+  height: 60px;
+  border-radius: 7px;
+  border: none;
+  margin-bottom: 10px;
+  background-color: var(--specialBtn);
+  color: white;
+  box-shadow: 0 4px var(--specialShadow);
+}
+
+.special-button:active{
+  background-color: var(--specialShadow)
+}
+
+.numbers-buttons-res {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between ;
+}
+
+.special-button-1{
+  font-size: 22px;
+  width: calc(50% - 5px);
+  height: 60px;
+  border-radius: 7px;
+  border: none;
+  margin-bottom: 10px;
+  background-color: var(--specialBtn);
+  color: white;
+  box-shadow: 0 4px var(--specialShadow);
+}
+.special-button-1:active{
+  background-color: var(--specialShadow)
+}
+
+.special-button-2 {
+  font-size: 22px;
+  width: calc(50% - 5px);
+  height: 60px;
+  border-radius: 7px;
+  border: none;
+  margin-bottom: 10px;
+  background-color: var(--equalButton);
+  color: var(--equalColor);
+  box-shadow: 0 4px var(--equalShadow);
+}
+
+.special-button-2:active {
+  background-color: var(--equalShadow)
+}
+
+#changeTheme{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: .7rem;
+}
+
+#changeTheme p {
+  margin-right: 10px;
+}
+
+.toggle{
+  width: 70px;
+  height: 25px;
+  background-color: var(--gridBackground);
+  border-radius: 10px;
+  padding: 0 2px;
+  cursor: pointer;
+}
+
+.themeContainer{
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+datalist {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#title{
+  font-size: 30px;
+}
+
+
+.theme1{
+  --background: hsl(224, 26%, 31%);
+  --btnBackground: hsl(32, 26%, 89%); 
+  --specialBtn: hsl(224, 51%, 76%);
+  --numberColor: hsl(224, 12%, 31%);
+  --equalButton: hsl(6, 93%, 67%);
+  --gridBackground: hsl(225, 30%, 21%);
+  --specialShadow: hsl(224, 27%, 33%);
+  --equalShadow: hsl(3, 53%, 32%);
+  --result: hsl(224, 35%, 15%);
+  --resultNumber: hsl(330, 50%, 99%);
+  --equalColor: var(--resultNumber);
+  --btnShadow: hsl(24, 17%, 65%);
+}
+
+.theme2{
+  --background: hsl(0, 0%, 90%);
+  --btnBackground: hsl(48, 9%, 89%);
+  --specialBtn: hsl(185, 40%, 56%);
+  --numberColor: hsl(60, 9%, 19%);
+  --equalButton: hsl(25, 100%, 61%);
+  --result: hsl(0, 0%, 93%);
+  --gridBackground: hsl(0, 6%, 82%);
+  --specialShadow: hsl(185, 67%, 23%);
+  --equalShadow: hsl(23, 100%, 25%);
+  --resultNumber: hsl(69, 8%, 17%);
+  --equalColor: var(--result);
+  --btnShadow: hsl(35, 11%, 59%);
+}
+
+.theme3{
+  --background: hsl(268, 75%, 9%);
+  --btnBackground: hsl(270, 48%, 20%);
+  --gridBackground: hsl(268, 75%, 12%);
+  --specialBtn: hsl(280, 56%, 44%);
+  --numberColor: hsl(53, 100%, 62%);
+  --equalButton: hsl(177, 100%, 79%);
+  --btnShadow: hsl(289, 67%, 38%);
+  --specialShadow: hsl(288, 66%, 36%);
+  --equalShadow: hsl(177, 100%, 79%);
+  --result: var(--gridBackground);
+  --resultNumber: var(--numberColor);
+  --equalColor: hsl(184, 31%, 25%);
+}
+
+@media (min-width:1440px) { 
+  body{
+    display: grid;
+    place-content: center;
+  }
+  main{
+    width: 454px;
+  }
+
+  button{
+    padding-top: 10px;
+   
+  }
+ 
+  .number-button{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .special-button{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .special-button-1{
+    width: calc(50% - 10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .special-button-2{
+    width: calc(50% - 10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+ 
+}

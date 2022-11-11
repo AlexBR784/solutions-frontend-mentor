@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator App</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="resources/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="range.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="themes.js"></script>
+  </head>
+  <body class="theme1">
+    <main>
+      <div class="top-bar">
+        <p id="title">calc</p>
+        <div id="changeTheme">
+          <p>THEME</p>
+          <div class="themeSelector">
+            <div class="themeContainer">
+              <datalist id="tickmarks">
+                <option value="1" label="1"></option>
+                <option value="2" label="2"></option>
+                <option value="3" label="3"></option>
+              </datalist>
+
+              <input
+                type="range"
+                name="points"
+                min="1"
+                step="1"
+                id="custom-toggle"
+                class="toggle"
+                max="3"
+                value="1"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="result">
+        <p id="result-number">0</p>
+      </div>
+      <div class="numbers">
+        <div class="numbers-buttons">
+          <button data-number class="number-button">7</button>
+          <button data-number class="number-button">8</button>
+          <button data-number class="number-button">9</button>
+          <button data-remove class="special-button">DEL</button>
+          <button data-number class="number-button">4</button>
+          <button data-number class="number-button">5</button>
+          <button data-number class="number-button">6</button>
+          <button data-op class="number-button">+</button>
+          <button data-number class="number-button">1</button>
+          <button data-number class="number-button">2</button>
+          <button data-number class="number-button">3</button>
+          <button data-op class="number-button">-</button>
+          <button data-dec class="number-button">.</button>
+          <button data-number class="number-button">0</button>
+          <button data-op class="number-button">/</button>
+          <button data-op class="number-button">x</button>
+        </div>
+        <div class="numbers-buttons-res">
+          <button data-reset class="special-button-1">RESET</button>
+          <button data-equal class="special-button-2">=</button>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
