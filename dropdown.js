@@ -28,6 +28,10 @@ const projects = [
     name: "QR-Code-Component",
     URL: "https://alexbr784.github.io/solutions-frontend-mentor/QR-Code-Component",
   },
+  {
+    name: "IP-Address-Tracker",
+    URL: "https://alexbr784.github.io/solutions-frontend-mentor/IP-Address-Tracker",
+  },
 ];
 
 const ul = document.getElementById("dropUl");
