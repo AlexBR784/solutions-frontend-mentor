@@ -28,4 +28,5 @@ code and maybe solve your problem.
 
  - [Frontend Mentor](https://www.frontendmentor.io/)
  - [ipify API](https://www.ipify.org/)
+ - [SweetAlert 2](https://sweetalert2.github.io/)
  - [MD Badges](https://github.com/Ileriayo/markdown-badges)
