@@ -14,7 +14,6 @@ In this repository, you can find some of the Frontend Mentor challenges solved.
 These solutions aren't perfect, but you can use them to compare your 
 code and maybe solve your problem.
 
-## IP Tracker
 
 ## 🛠 Technologies used for the projects
 - ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
